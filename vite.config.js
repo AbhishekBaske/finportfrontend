@@ -5,11 +5,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    proxy:{
-        '/api': 'https://finportbackend.onrender.com',
-    }
   },
   build: {
     outDir: 'dist',
+    sourcemap: false,
+    minify: 'esbuild',
+  },
+  preview: {
+    port: 3000,
   },
 });
