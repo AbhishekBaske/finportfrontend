@@ -17,10 +17,14 @@ const Page = styled.div`
 `;
 
 const Hero = styled.section`
-  padding: 120px 24px 80px;
+  padding: 120px 16px 80px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 100px 16px 60px;
+  }
 `;
 
 const Badge = styled.span`
@@ -31,14 +35,26 @@ const Badge = styled.span`
   font-size: 14px;
   font-weight: 600;
   margin-right: 12px;
+  
+  @media (max-width: 768px) {
+    display: block;
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 `;
 
 const HeroTitle = styled.h1`
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 800;
   line-height: 1.15;
   margin: 32px 0;
   color: #111827;
+  
+  @media (max-width: 768px) {
+    margin: 24px 0;
+    line-height: 1.2;
+  }
 `;
 
 const HeroSubtitle = styled.p`
@@ -47,6 +63,12 @@ const HeroSubtitle = styled.p`
   max-width: 600px;
   margin: 0 auto 48px;
   line-height: 1.6;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 0 auto 32px;
+    padding: 0 8px;
+  }
 `;
 
 const ButtonsRow = styled.div`
@@ -54,6 +76,17 @@ const ButtonsRow = styled.div`
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    
+    button {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
 `;
 
 const PrimaryButton = styled.button`
@@ -71,6 +104,11 @@ const PrimaryButton = styled.button`
     transform: translateY(-2px);
     background: #4338ca;
   }
+  
+  @media (max-width: 768px) {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
 `;
 
 const OutlineButton = styled.button`
@@ -83,12 +121,21 @@ const OutlineButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: 0.25s;
+  
+  @media (max-width: 768px) {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
 `;
 
 const FeaturesSection = styled.section`
   background: #1e293b;
   color: white;
   padding: 120px 24px;
+  
+  @media (max-width: 768px) {
+    padding: 80px 16px;
+  }
 `;
 
 const FeaturesGrid = styled.div`
@@ -101,12 +148,21 @@ const FeaturesGrid = styled.div`
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    gap: 40px;
   }
 `;
 
 const FeatureBlock = styled.div`
   display: flex;
   margin-bottom: 24px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const FeatureIcon = styled.div`
@@ -129,6 +185,13 @@ const CodeBox = styled.div`
   font-family: monospace;
   font-size: 15px;
   line-height: 1.4;
+  overflow-x: auto;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
 `;
 
 /* ───────── COMPONENT ───────── */
@@ -196,7 +259,11 @@ const Home: React.FC = () => {
       <FeaturesSection ref={featureRef}>
         <FeaturesGrid>
           <div>
-            <h2 style={{ fontSize: "2.3rem", marginBottom: 32 }}>
+            <h2 style={{ 
+              fontSize: "clamp(1.8rem, 5vw, 2.3rem)", 
+              marginBottom: 32,
+              lineHeight: 1.2 
+            }}>
               Built for traders, developers and innovators
             </h2>
 

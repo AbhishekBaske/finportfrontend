@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
           background: "white",
           borderBottom: "1px solid #e5e7eb",
           boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
-          padding: "16px 32px",
+          padding: "16px 24px",
         }}
       >
         <div

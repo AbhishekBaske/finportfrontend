@@ -6,6 +6,10 @@ const Page = styled.div`
   min-height: 100vh;
   padding: 110px 24px 40px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+  
+  @media (max-width: 768px) {
+    padding: 100px 16px 40px;
+  }
 `;
 
 const Card = styled.div`
@@ -16,6 +20,12 @@ const Card = styled.div`
   padding: 60px 48px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+    margin: 0 16px;
+    border-radius: 12px;
+  }
 `;
 
 const Title = styled.h1`
@@ -23,12 +33,22 @@ const Title = styled.h1`
   font-weight: 800;
   text-align: center;
   margin-bottom: 10px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
 `;
 
 const Subtitle = styled.p`
   text-align: center;
   color: #6b7280;
   margin-bottom: 32px;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
 `;
 
 const Alert = styled.div<{ success?: boolean }>`

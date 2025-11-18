@@ -79,6 +79,10 @@ const Page = styled.div`
   min-height: 100vh;
   padding: 120px 24px 40px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  @media (max-width: 768px) {
+    padding: 100px 16px 40px;
+  }
 `;
 
 const Container = styled.div`
@@ -89,6 +93,10 @@ const Container = styled.div`
 const HeaderSection = styled.div`
   margin-bottom: 48px;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
 `;
 
 const HeaderTitle = styled.h1`
@@ -96,12 +104,23 @@ const HeaderTitle = styled.h1`
   font-weight: 800;
   color: #111827;
   margin-bottom: 16px;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
 `;
 
 const HeaderSubtitle = styled.p`
   font-size: 18px;
   color: #6b7280;
   margin-bottom: 32px;
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding: 0 8px;
+  }
 `;
 
 const ControlsCard = styled.div`
@@ -110,6 +129,12 @@ const ControlsCard = styled.div`
   padding: 32px;
   margin-bottom: 32px;
   border: 1px solid #e2e8f0;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
 `;
 
 const ControlsRow = styled.div`
@@ -117,9 +142,19 @@ const ControlsRow = styled.div`
   gap: 32px;
   align-items: center;
   flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
 `;
 
-const ControlGroup = styled.div``;
+const ControlGroup = styled.div`
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 const Label = styled.label`
   display: block;
@@ -127,6 +162,10 @@ const Label = styled.label`
   font-weight: 600;
   color: #374151;
   margin-bottom: 8px;
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 const Select = styled.select`
@@ -138,6 +177,13 @@ const Select = styled.select`
   min-width: 150px;
   outline: none;
   font-weight: 500;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: unset;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
 `;
 
 const ChartCard = styled.div`
@@ -147,6 +193,12 @@ const ChartCard = styled.div`
   border: 1px solid #e2e8f0;
   margin-bottom: 32px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
 `;
 
 const ErrorBox = styled.div`
@@ -154,6 +206,11 @@ const ErrorBox = styled.div`
   font-size: 16px;
   text-align: center;
   padding: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 24px 16px;
+  }
 `;
 
 const LoaderBox = styled.div`
@@ -163,10 +220,19 @@ const LoaderBox = styled.div`
   height: 300px;
   color: #6b7280;
   font-size: 18px;
+  
+  @media (max-width: 768px) {
+    height: 250px;
+    font-size: 16px;
+  }
 `;
 
 const StockInfo = styled.div`
   margin-bottom: 32px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
 `;
 
 const StockInfoRow = styled.div`
@@ -175,6 +241,13 @@ const StockInfoRow = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
 `;
 
 const SymbolBlock = styled.div``;
@@ -184,12 +257,21 @@ const SymbolTitle = styled.h2`
   font-weight: 700;
   color: #111827;
   margin-bottom: 8px;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
 `;
 
 const SymbolSubtitle = styled.p`
   font-size: 14px;
   color: #6b7280;
   margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `;
 
 const PriceBox = styled.div`
@@ -197,16 +279,30 @@ const PriceBox = styled.div`
   padding: 16px 24px;
   border-radius: 12px;
   border: 1px solid #0ea5e9;
+  
+  @media (max-width: 768px) {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 200px;
+  }
 `;
 
 const PriceText = styled.div`
   font-size: 2rem;
   font-weight: 800;
   color: #0ea5e9;
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const ChartContainer = styled.div`
   height: 400px;
+  
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const SymbolsCard = styled.div`
@@ -214,6 +310,11 @@ const SymbolsCard = styled.div`
   border-radius: 16px;
   padding: 32px;
   border: 1px solid #e2e8f0;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    border-radius: 12px;
+  }
 `;
 
 const SymbolsTitle = styled.h3`
@@ -221,12 +322,23 @@ const SymbolsTitle = styled.h3`
   font-weight: 700;
   color: #111827;
   margin-bottom: 24px;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 `;
 
 const SymbolsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 12px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
 `;
 
 const SymbolChip = styled.div`
@@ -238,6 +350,12 @@ const SymbolChip = styled.div`
   font-size: 14px;
   font-weight: 600;
   color: #374151;
+  
+  @media (max-width: 768px) {
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
 `;
 
 /* ────────────────────────────────────────────── */
