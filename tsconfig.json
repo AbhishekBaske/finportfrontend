@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "react-jsx"
   },
-  "include": ["app", "components", "store", "index.html"],
+  "include": ["src", "components", "context", "*.ts", "*.tsx", "index.html"],
   "exclude": ["node_modules"]
 }
